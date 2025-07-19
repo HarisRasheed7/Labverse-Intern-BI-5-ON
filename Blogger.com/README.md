@@ -37,32 +37,7 @@ The landing page consists of 7 main sections:
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Basic web server (optional, for local development)
 
-### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/blogger-landing-page.git
-   ```
-
-2. **Navigate to project directory**
-   ```bash
-   cd blogger-landing-page
-   ```
-
-3. **Open in browser**
-   ```bash
-   # Simply open index.html in your browser
-   open index.html
-   ```
-
-   Or serve locally:
-   ```bash
-   # Using Python
-   python -m http.server 8000
-   
-   # Using Node.js
-   npx serve .
-   ```
 
 ## 📁 Project Structure
 
