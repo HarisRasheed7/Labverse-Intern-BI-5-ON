@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            border: 3px solid green;
+            padding: 10px;
+            background: lime;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: lightgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5px;
+            color: black;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background: aquamarine;
+            color: black;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+
+    </style>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Team</a>
+    </nav>
+
+    <button onclick="toggleStyle()">Toggle Style</button>
+    <div id="colorBox" style="width:100px; height:100px; background-color:lightgray;"></div>
+    <style>
+        .redBox {
+            background-color: crimson;
+        }
+    </style>
+    <script>
+        function toggleStyle() {
+            document.getElementById("colorBox").classList.toggle("redBox");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

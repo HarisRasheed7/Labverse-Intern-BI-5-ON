@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            border: 3px solid green;
+            padding: 10px;
+            background: lime;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: lightgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5px;
+            color: black;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background: aquamarine;
+            color: black;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+
+        .btns{
+            display: flex;
+            justify-content: center;
+            gap: 2px;
+        }
+
+        .btns button{
+            color: black;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+    </style>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Team</a>
+    </nav>
+
+    <img id="carousel" src="" width="100%" height="400">
+    <br>
+    <div class="btns">
+        <button onclick="showPrevious()">Previous</button>
+        <button onclick="showNext()">Next</button>
+    </div>
+
+
+    <script>
+        const images = [
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrzpRq5pTHcfDfqR0aXpUA_PDjtAT4G5ctnA&s/400x400?text=Image+1",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQK41PUXJFBVRme6_Ti9qEX3G5X1BAQtZ5bQ&s/400x400?text=Image+2",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6Ez51_SUC7E3_kveoVabZGOWk4hYQbLjd-Q&s/400x400?text=Image+3"
+        ];
+        let current = 0;
+        function showImage() {
+            document.getElementById("carousel").src = images[current];
+        }
+        function showNext() {
+            current = (current + 1) % images.length;
+            showImage();
+        }
+        function showPrevious() {
+            current = (current - 1 + images.length) % images.length;
+            showImage();
+        }
+        showImage();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            border: 3px solid green;
+            padding: 10px;
+            background: lime;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: lightgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5px;
+            color: black;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background: aquamarine;
+            color: black;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+
+        .myform {
+            display: grid;
+            align-content: stretch;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+
+        .myform input{
+            color: darkgreen;
+            background: springgreen;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .myform button{
+            color: darkgreen;
+            background: springgreen;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+    </style>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Team</a>
+    </nav>
+
+    <form class="myform" id="myForm">
+        <input type="email" id="email" placeholder="Enter email">
+        <br>
+        <input type="password" name="" id="" placeholder="Password">
+        <br>
+        <button type="submit">Submit</button>
+        <p id="message"></p>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function (e) {
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message");
+
+            if (!email || !email.includes("@")) {
+                e.preventDefault(); // stop form from submitting
+                message.textContent = "❌ Please enter a valid email.";
+                message.style.color = "red";
+            } else {
+                message.textContent = " Email looks good!";
+                message.style.color = "green";
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>

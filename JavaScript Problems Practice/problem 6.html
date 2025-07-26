@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>problem1</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            border: 3px solid green;
+            padding: 10px;
+            background: lime;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            background: lightgreen;
+            border: 3px solid darkgreen;
+            border-radius: 5px;
+            color: black;
+            font-weight: 500;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-evenly;
+            background: aquamarine;
+            color: black;
+            padding: 10px;
+            border: 1px solid seagreen;
+        }
+    </style>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Team</a>
+    </nav>
+
+
+
+    <textarea id="text" oninput="count()"></textarea>
+    <p>Characters: <span id="number">0</span></p>
+
+    <script>
+        function count() {
+            let txt = document.getElementById("text").value;
+            document.getElementById("number").innerText = txt.length;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
